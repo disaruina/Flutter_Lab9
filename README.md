@@ -1,17 +1,24 @@
-# slot_machine_bunicheva_shkurskii
+# Лабораторная работа №9. Flutter: StatefulWidget и управление состоянием
 
-A new Flutter project.
+* **Выполнили:** Шкурский Максим и Буничева Алёна
+* **Группа:** ИСП-242
+* **Дата сдачи:** 13.11.2026
 
-## Getting Started
+## О чем проект:
+Написали игровой автомат на Flutter. В игре есть счетчик монет, три крутящихся барабана и кнопка сброса. Самое крутое это реалистичная анимация: слоты запускаются одновременно, а останавливаются по очереди с постепенным замедлением, как в настоящих автоматах.
 
-This project is a starting point for a Flutter application.
+## Что мы изучили:
+1. На практике разобрались, в чем разница между `StatelessWidget` и `StatefulWidget`.
+2. Научились работать с продвинутой асинхронностью. Через `Future.wait` запустили крутилку сразу на всех трех барабанах, а с помощью `Future.delayed` настроили фазы скорости.
+3. Поняли, как защитить приложение от вылетов через проверку `if (!mounted)`. Это нужно, чтобы код не пытался обновить экран, если пользователь закрыл игру прямо во время вращения.
+4. Освоили анимированные виджеты: применили `AnimatedOpacity`, чтобы барабаны плавно приглушались во время прокрутки, и `AnimatedSwitcher` для красивого появления надписи «ДЖЕКПОТ!».
 
-A few resources to get you started if this is your first Flutter project:
+![Игровой экран](img/step3_step3_bunicheva_shkurskii.png)
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Как запустить проект:
+## Запуск
+1. `git clone https://github.com/disaruina/Flutter_Lab9`
+2. `cd Flutter_Lab9`
+3. `code .`
+4. `flutter pub get`
+5. `flutter run -d chrome`
